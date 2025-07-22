@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>파란두루미(주): 스크래치 홀로그램 기술 인포그래픽</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+       .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+           .chart-container {
+                height: 350px;
+            }
+        }
+       .gradient-text {
+            background: linear-gradient(to right, #0a9396, #ee9b00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+       .flow-arrow {
+            font-size: 2rem;
+            color: #0a9396;
+            margin: 0 1rem;
+            align-self: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center my-12">
+            <h1 class="text-4xl md:text-6xl font-black mb-4">
+                <span class="gradient-text">파란두루미</span>: 만질 수 있는 현실
+            </h1>
+            <p class="text-lg md:text-2xl font-light text-gray-600">저비용·고속·실물 기반 XR 콘텐츠의 새로운 미래를 엽니다.</p>
+        </header>
+
+        <section class="my-16">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold mb-4">기술의 핵심: 원스톱 홀로그램 제작 솔루션</h2>
+                <p class="text-gray-600">파란두루미의 기술은 '캡처 → 생성 → 출력'에 이르는 전 과정을 통합하여, 누구나 쉽고 빠르게 실물 XR 콘텐츠를 경험하게 합니다.</p>
+            </div>
+            <div class="flex flex-col md:flex-row justify-center items-center text-center">
+                <div class="bg-white rounded-lg shadow-lg p-6 m-2 w-full md:w-1/4">
+                    <div class="text-4xl mb-2">📸</div>
+                    <h3 class="text-xl font-bold text-[#005f73]">캡처</h3>
+                    <p class="text-sm text-gray-500">카메라 기반 3D 스캔 또는 포인트 클라우드 데이터 입력</p>
+                </div>
+                <div class="flow-arrow hidden md:block">→</div>
+                <div class="bg-white rounded-lg shadow-lg p-6 m-2 w-full md:w-1/4">
+                    <div class="text-4xl mb-2">💡</div>
+                    <h3 class="text-xl font-bold text-[#0a9396]">생성</h3>
+                    <p class="text-sm text-gray-500">가속 알고리즘으로 홀로그램 패턴 고속 생성</p>
+                </div>
+                <div class="flow-arrow hidden md:block">→</div>
+                <div class="bg-white rounded-lg shadow-lg p-6 m-2 w-full md:w-1/4">
+                    <div class="text-4xl mb-2">🖨️</div>
+                    <h3 class="text-xl font-bold text-[#94d2bd]">출력</h3>
+                    <p class="text-sm text-gray-500">맞춤형 프린터로 플라스틱/필름에 즉석 출력</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-20">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold mb-4">무엇이 다른가? 기존 기술과의 비교</h2>
+                <p class="text-gray-600">기존 홀로그램의 높은 비용과 시간 장벽을 허물고 대중화를 실현합니다.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-4 text-[#ae2012]">기존 광간섭 홀로그램</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start"><span class="text-red-500 mr-2">❌</span> <div><strong>고비용:</strong> 대형 레이저 장비 및 고정 필름 필수</div></li>
+                        <li class="flex items-start"><span class="text-red-500 mr-2">❌</span> <div><strong>저속:</strong> 제작에 수십 시간 소요, 실시간 처리 불가</div></li>
+                        <li class="flex items-start"><span class="text-red-500 mr-2">❌</span> <div><strong>제한된 접근성:</strong> 특수 장비 없이는 체험 불가</div></li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-4 border-[#0a9396]">
+                    <h3 class="text-2xl font-bold mb-4 text-[#005f73]">파란두루미 스크래치 홀로그램</h3>
+                     <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start"><span class="text-green-500 mr-2">✔️</span> <div><strong>저비용:</strong> 플라스틱 필름과 맞춤형 프린터로 구현</div></li>
+                        <li class="flex items-start"><span class="text-green-500 mr-2">✔️</span> <div><strong>초고속:</strong> 수십 시간 걸리던 작업을 수 초 내에 완료</div></li>
+                        <li class="flex items-start"><span class="text-green-500 mr-2">✔️</span> <div><strong>높은 접근성:</strong> HMD 없이 실물 카드로 즉시 체험</div></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-20">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold mb-4">파란두루미의 핵심 기술 요소</h2>
+                <p class="text-gray-600">알고리즘, 하드웨어, 컬러 구현 기술의 융합으로 완성도와 확장성을 확보했습니다.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-bold mb-2 text-[#005f73]">1. 가속 알고리즘</h3>
+                    <p class="text-gray-600 mb-4">3D 모델이나 일반 사진에서 홀로그램 패턴을 수작업 없이 빠르게 생성하여 제작 시간을 획기적으로 단축합니다.</p>
+                    <div class="chart-container h-64 max-h-64"><canvas id="algorithmChart"></canvas></div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-bold mb-2 text-[#0a9396]">2. 맞춤형 출력 장치</h3>
+                    <p class="text-gray-600 mb-4">수많은 미세 스크래치를 고속으로 구현하는 전용 프린터를 개발하여, 이론상 수 초 내 출력을 가능하게 합니다.</p>
+                    <div class="text-5xl font-black my-8 text-[#ee9b00]">34시간 → 10초</div>
+                    <p class="text-gray-500">기존 제작 방식 대비 압도적인 속도 향상</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-bold mb-2 text-[#94d2bd]">3. 컬러 구현 기술</h3>
+                    <p class="text-gray-600 mb-4">단색의 한계를 넘어 컬러 스크래치 홀로그램을 연구하여 '인생네컷' 등 즉석 포토 시장의 새로운 수요를 창출합니다.</p>
+                    <div class="chart-container h-64 max-h-64"><canvas id="colorMarketChart"></canvas></div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="my-20">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold mb-4">혁신이 만드는 4가지 차별점</h2>
+                <p class="text-gray-600">파란두루미의 기술은 비용, 경험, 융합, 교육 모든 면에서 새로운 가치를 제공합니다.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2 text-[#ca6702]">저비용·고효율 3D 콘텐츠 제작</h3>
+                    <p class="text-gray-600 mb-4">제작 비용과 시간을 획기적으로 절감하여 개인 맞춤형 제작 및 대량 생산의 길을 엽니다. '즉석 홀로그램 포토'와 같은 새로운 서비스가 가능해집니다.</p>
+                    <div class="chart-container h-64 max-h-64"><canvas id="costChart"></canvas></div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2 text-[#bb3e03]">별도 장비 없는 몰입형 XR 경험</h3>
+                    <p class="text-gray-600 mb-4">HMD 없이 실물 홀로그램 카드를 통해 3D 이미지를 체험하게 함으로써, 남녀노소 누구나 즐기는 포용적 XR 서비스를 지향합니다.</p>
+                    <div class="flex justify-around items-center h-64">
+                        <div class="text-center">
+                            <div class="text-6xl">🕶️</div>
+                            <p class="mt-2 font-bold">일반 XR</p>
+                            <p class="text-sm text-gray-500">HMD 필요</p>
+                        </div>
+                        <div class="text-4xl font-bold text-gray-400">VS</div>
+                        <div class="text-center">
+                            <div class="text-6xl">🖼️</div>
+                            <p class="mt-2 font-bold">파란두루미 XR</p>
+                            <p class="text-sm text-gray-500">실물 카드</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2 text-[#ae2012]">융합 콘텐츠와 새로운 경험 제공</h3>
+                    <p class="text-gray-600 mb-4">AI, 카메라 기술과 융합하여 '인생네컷'에 홀로그램을 추가하거나, 3D 캐릭터를 실물 굿즈로 제작하는 등 디지털과 물리적 경험을 연결합니다.</p>
+                    <div class="flex items-center justify-center h-64 bg-gray-100 rounded-lg p-4">
+                        <div class="text-center">
+                            <p class="text-lg font-semibold">2D 사진</p>
+                            <p class="text-4xl">+</p>
+                            <p class="text-lg font-semibold">홀로그램 카드</p>
+                        </div>
+                        <div class="text-4xl mx-4">=</div>
+                        <div class="text-center">
+                            <p class="text-2xl font-bold text-[#0a9396]">혁신적 고객 경험</p>
+                            <p class="text-lg font-semibold">& 부가가치 상승</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2 text-[#9b2226]">교육 및 참여형 활용성</h3>
+                    <p class="text-gray-600 mb-4">학생들이 직접 3D 사진을 찍고 홀로그램을 제작하는 체험형 교육 키트를 보급하여 STEM 교육에 대한 흥미와 참여를 높입니다.</p>
+                    <div class="chart-container h-64 max-h-64"><canvas id="educationChart"></canvas></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-20">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold mb-4">혁신적인 보조기기 아이디어: 홀로그램이 만드는 새로운 일상</h2>
+                <p class="text-gray-600">파란두루미의 비광학적 홀로그램 기술이 노인과 장애인의 삶을 어떻게 변화시킬 수 있는지 10가지 아이디어를 통해 보여드립니다.</p>
+            </div>
+
+            <h3 class="text-2xl font-bold mb-6 text-[#005f73] text-center">노인을 위한 아이디어</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                    <div class="text-5xl mb-4 text-center">🦷</div>
+                    <h4 class="text-xl font-bold mb-2 text-[#0a9396]">1. 스마트 홀로그램 구강 관리 시스템</h4>
+                    <p class="text-gray-600 mb-3 text-sm">사용자의 구강 상태를 실시간 분석하고, 올바른 칫솔질 방법 및 구강 관리 루틴을 홀로그램으로 시각화하여 안내합니다.</p>
+                    <ul class="list-disc list-inside text-gray-700 text-sm mt-auto">
+                        <li>거울/세면대에 홀로그램 투영, 실시간 칫솔질 가이드 제공 [1]</li>
+                        <li>구강 센서 연동, 플라그/염증 부위 홀로그램 강조 [1]</li>
+                        <li>개인화된 시각/청각 안내로 효과적인 구강 위생 유지</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                    <div class="text-5xl mb-4 text-center">🚿</div>
+                    <h4 class="text-xl font-bold mb-2 text-[#0a9396]">2. 홀로그램 샤워 보조 시스템</h4>
+                    <p class="text-gray-600 mb-3 text-sm">샤워 공간 내에 홀로그램을 투영하여 안전한 목욕을 돕고, 신체 부위별 세척 가이드를 제공합니다.</p>
+                    <ul class="list-disc list-inside text-gray-700 text-sm mt-auto">
+                        <li>샤워 부스 내 홀로그램으로 세척 순서/방법 안내 [1]</li>
+                        <li>바닥 센서 연동, 미끄러운 부분 감지 및 낙상 경보 [2, 3]</li>
+                        <li>인지 저하 노인을 위한 차분한 시각 패턴 투영 [1]</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                    <div class="text-5xl mb-4 text-center">👕</div>
+                    <h4 class="text-xl font-bold mb-2 text-[#0a9396]">3. 지능형 홀로그램 의복 관리 도우미</h4>
+                    <p class="text-gray-600 mb-3 text-sm">고령자가 스스로 옷을 선택하고 입는 과정을 홀로그램으로 안내하여 독립성을 증진시킵니다.</p>
+                    <ul class="list-disc list-inside text-gray-700 text-sm mt-auto">
+                        <li>옷장 스캔, 날씨/목적에 맞는 옷차림 홀로그램 제안 [4]</li>
+                        <li>치매 환자를 위한 옷 입는 순서, 앞뒤 구분 홀로그램 안내 [4, 5]</li>
+                        <li>벨크로/똑딱단추 사용법 시연, 옷 입기 어려움 해소 [4, 5]</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                    <div class="text-5xl mb-4 text-center">🚶</div>
+                    <h4 class="text-xl font-bold mb-2 text-[#0a9396]">4. 홀로그램 낙상 예방 및 재활 운동 가이드</h4>
+                    <p class="text-gray-600 mb-3 text-sm">개인 맞춤형 균형 및 근력 강화 운동을 홀로그램으로 지도하고, 실시간으로 환경 내 낙상 위험 요소를 경고합니다.</p>
+                    <ul class="list-disc list-inside text-gray-700 text-sm mt-auto">
+                        <li>홀로그램 가상 트레이너가 운동 시연, 자세 교정 [6, 7]</li>
+                        <li>실내 장애물/미끄러운 부분 감지, 홀로그램 경고 표시 [2, 3]</li>
+                        <li>동적 운동 코칭과 실시간 안전 경고로 낙상 예방 극대화</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                    <div class="text-5xl mb-4 text-center">💊</div>
+                    <h4 class="text-xl font-bold mb-2 text-[#0a9396]">5. 홀로그램 스마트 약물 복용 시스템</h4>
+                    <p class="text-gray-600 mb-3 text-sm">고령자가 정확하게 약을 복용할 수 있도록 홀로그램으로 시각적, 청각적 안내를 제공합니다.</p>
+                    <ul class="list-disc list-inside text-gray-700 text-sm mt-auto">
+                        <li>스마트 약통 연동, 약 홀로그램 이미지 및 음성 안내 [8, 9, 10]</li>
+                        <li>시각 장애인을 위한 약 정보 확대/음성 강화 [11]</li>
+                        <li>미복용 시 보호자 알림 전송 기능 [9]</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-bold mb-6 text-[#005f73] text-center">장애인을 위한 아이디어</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                    <div class="text-5xl mb-4 text-center">🗺️</div>
+                    <h4 class="text-xl font-bold mb-2 text-[#0a9396]">6. 홀로그램 환경 인식 및 보행 보조 시스템</h4>
+                    <p class="text-gray-600 mb-3 text-sm">시각 또는 이동성 장애인이 주변 환경을 더 안전하고 효율적으로 탐색할 수 있도록 실시간 홀로그램 안내를 제공합니다.</p>
+                    <ul class="list-disc list-inside text-gray-700 text-sm mt-auto">
+                        <li>웨어러블/실내 프로젝터로 장애물, 경로 홀로그램 표시 [12]</li>
+                        <li>최적 이동 경로, 안전 지점 홀로그램 안내 [13]</li>
+                        <li>휠체어/보행 보조기구 연동, 동적 시각 지침 제공 [14, 15]</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                    <div class="text-5xl mb-4 text-center">🧴</div>
+                    <h4 class="text-xl font-bold mb-2 text-[#0a9396]">7. 홀로그램 개인위생 제품 식별 및 사용 가이드</h4>
+                    <p class="text-gray-600 mb-3 text-sm">시각 또는 인지 장애인이 개인위생 용품을 쉽게 식별하고 올바르게 사용할 수 있도록 홀로그램 안내를 제공합니다.</p>
+                    <ul class="list-disc list-inside text-gray-700 text-sm mt-auto">
+                        <li>제품 스캔 시 이름, 용도, 사용법 홀로그램/음성 투영 [10, 16]</li>
+                        <li>시각 장애인을 위한 정보 확대/점자 시뮬레이션 [17, 18]</li>
+                        <li>인지 장애인을 위한 단순화된 홀로그램 애니메이션 안내 [19]</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                    <div class="text-5xl mb-4 text-center">🚨</div>
+                    <h4 class="text-xl font-bold mb-2 text-[#0a9396]">8. 홀로그램 다감각 안전 경보 시스템</h4>
+                    <p class="text-gray-600 mb-3 text-sm">화재 경보, 초인종 등 중요한 안전 및 알림 신호를 청각 장애인을 포함한 모든 사용자에게 다중 감각 홀로그램으로 전달합니다.</p>
+                    <ul class="list-disc list-inside text-gray-700 text-sm mt-auto">
+                        <li>센서 연동, 밝고 명확한 홀로그램 시각 경보 투영 [20, 21]</li>
+                        <li>진동 피드백 연동, 청각 장애인 수면 중 경보 인지 [20]</li>
+                        <li>비상시 대피 경로 홀로그램 안내 [20]</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                    <div class="text-5xl mb-4 text-center">🎭</div>
+                    <h4 class="text-xl font-bold mb-2 text-[#0a9396]">9. 홀로그램 사회성 훈련 및 감정 표현 도우미</h4>
+                    <p class="text-gray-600 mb-3 text-sm">자폐 스펙트럼 장애를 가진 개인을 포함한 발달 장애 아동 및 청소년이 사회적 기술과 감정 표현 능력을 훈련할 수 있도록 몰입형 홀로그램 환경을 제공합니다.</p>
+                    <ul class="list-disc list-inside text-gray-700 text-sm mt-auto">
+                        <li>가상 홀로그램 캐릭터/시나리오로 사회적 상황 연습 [22, 23]</li>
+                        <li>AI 연동, 사용자 표정/음성 분석 및 실시간 홀로그램 피드백 [23]</li>
+                        <li>몰입감 있는 훈련 환경으로 사회적 불안감 감소</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                    <div class="text-5xl mb-4 text-center">🏋️</div>
+                    <h4 class="text-xl font-bold mb-2 text-[#0a9396]">10. 홀로그램 맞춤형 재활 운동 코치</h4>
+                    <p class="text-gray-600 mb-3 text-sm">신체 장애인의 재활 운동을 위해 개인의 능력과 진행 상황에 맞춰 홀로그램으로 맞춤형 운동 가이드를 제공합니다.</p>
+                    <ul class="list-disc list-inside text-gray-700 text-sm mt-auto">
+                        <li>센서 연동, 홀로그램 아바타가 재활 운동 시연 [6, 24]</li>
+                        <li>자세/움직임 분석, 홀로그램 시각 피드백 및 난이도 조절 [6]</li>
+                        <li>가정 재활 지원으로 병원 방문 부담 감소</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-4">시장 기회 및 타겟 고객</h2>
+                    <p class="text-gray-600 mb-6">파란두루미는 B2B, B2G, B2C, 교육 시장을 아우르는 다양한 고객층을 타겟으로 하여 새로운 시장을 개척합니다.</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>B2B:</strong> 셀프 사진관 (인생네컷, 포토이즘 등)</li>
+                        <li><strong>B2G:</strong> 과학관, 교육청, 지자체 XR 체험존</li>
+                        <li><strong>B2C:</strong> 10-30대 MZ세대의 굿즈 커스터마이징</li>
+                        <li><strong>교육기관:</strong> 초중고 실감형 교육 콘텐츠 도입</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="chart-container h-80 max-h-80"><canvas id="marketChart"></canvas></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-20">
+             <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold mb-4">독보적인 경쟁력: First Mover</h2>
+                <p class="text-gray-600">상용화된 스크래치 홀로그램 기술을 보유한 국내 기업은 전무하며, 파란두루미는 이 시장의 선도자(First Mover)로서 강력한 IP 전략을 통해 시장 주도권을 확보할 수 있습니다.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="chart-container h-64 max-h-64"><canvas id="competitionChart"></canvas></div>
+            </div>
+        </section>
+
+        <footer class="text-center mt-20 py-8 border-t border-gray-200">
+            <p class="text-2xl font-bold gradient-text">파란두루미(주)</p>
+            <p class="text-gray-500">콘텐츠·하드웨어·소프트웨어를 아우르는 융합 경쟁력</p>
+        </footer>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const brilliantBlues = {
+                primary: '#0a9396',
+                secondary: '#94d2bd',
+                accent: '#ee9b00',
+                danger: '#ae2012',
+                dark: '#005f73',
+                neutral: '#e9d8a6',
+                accent2: '#ca6702',
+            };
+
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems;
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                }
+                return label;
+            };
+            
+            const commonOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            };
+
+            const wrapLabel = (label, maxWidth = 16) => {
+                if (label.length <= maxWidth) return label;
+                const words = label.split(' ');
+                const lines =;
+                let currentLine = '';
+                for (const word of words) {
+                    if ((currentLine + word).length > maxWidth && currentLine.length > 0) {
+                        lines.push(currentLine.trim());
+                        currentLine = '';
+                    }
+                    currentLine += word + ' ';
+                }
+                lines.push(currentLine.trim());
+                return lines;
+            };
+
+            const algorithmCtx = document.getElementById('algorithmChart')?.getContext('2d');
+            if (algorithmCtx) {
+                new Chart(algorithmCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['수작업', '파란두루미 알고리즘'],
+                        datasets: [{
+                            label: '패턴 생성 속도',
+                            data: ,
+                            backgroundColor:,
+                            borderColor:,
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {...commonOptions, scales: { y: { beginAtZero: true, ticks: { callback: (value) => value + '%' } } } }
+                });
+            }
+
+            const colorMarketCtx = document.getElementById('colorMarketChart')?.getContext('2d');
+            if (colorMarketCtx) {
+                new Chart(colorMarketCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['즉석 포토부스', '개인 굿즈', '이벤트/기념품', '기타'],
+                        datasets: [{
+                            label: '컬러 홀로그램 잠재 수요',
+                            data: ,
+                            backgroundColor:,
+                            hoverOffset: 4
+                        }]
+                    },
+                    options: commonOptions
+                });
+            }
+
+            const costCtx = document.getElementById('costChart')?.getContext('2d');
+            if (costCtx) {
+                new Chart(costCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['기존 홀로그램', '스크래치 홀로그램'],
+                        datasets: [{
+                            label: '장당 제작 비용',
+                            data: ,
+                            backgroundColor:,
+                        }]
+                    },
+                    options: {...commonOptions, indexAxis: 'y', scales: { x: { beginAtZero: true, ticks: { callback: (value) => value + '%' } } } }
+                });
+            }
+
+            const educationCtx = document.getElementById('educationChart')?.getContext('2d');
+            if (educationCtx) {
+                new Chart(educationCtx, {
+                    type: 'radar',
+                    data: {
+                        labels:,
+                        datasets: [{
+                            label: '교육적 활용성',
+                            data: ,
+                            fill: true,
+                            backgroundColor: 'rgba(148, 210, 189, 0.4)',
+                            borderColor: brilliantBlues.secondary,
+                            pointBackgroundColor: brilliantBlues.secondary,
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: brilliantBlues.secondary
+                        }]
+                    },
+                    options: {...commonOptions, scales: { r: { beginAtZero: true, max: 100 } } }
+                });
+            }
+
+            const marketCtx = document.getElementById('marketChart')?.getContext('2d');
+            if (marketCtx) {
+                new Chart(marketCtx, {
+                    type: 'bubble',
+                    data: {
+                        datasets:, backgroundColor: brilliantBlues.primary },
+                            { label: 'B2G: 공공기관/체험존', data: [{x: 40, y: 50, r: 18}], backgroundColor: brilliantBlues.secondary },
+                            { label: 'B2C: MZ세대 굿즈', data: [{x: 60, y: 25, r: 22}], backgroundColor: brilliantBlues.accent },
+                            { label: '교육기관', data: [{x: 75, y: 60, r: 20}], backgroundColor: brilliantBlues.accent2 }
+                        ]
+                    },
+                    options: {...commonOptions, plugins: { legend: { position: 'bottom' } }, scales: { x: { display: false }, y: { display: false } } }
+                });
+            }
+
+            const competitionCtx = document.getElementById('competitionChart')?.getContext('2d');
+            if (competitionCtx) {
+                const wrappedLabels = ['파란두루미 (상용 시스템)', '해외 연구기관 (시제품 수준)', '국내 유사 기술 (예술/장식 목적)'].map(label => wrapLabel(label));
+
+                new Chart(competitionCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: wrappedLabels,
+                        datasets: [{
+                            label: '상용화 수준',
+                            data: ,
+                            backgroundColor:,
+                        }]
+                    },
+                    options: {...commonOptions, indexAxis: 'y', scales: { x: { beginAtZero: true, max: 100, ticks: { callback: (value) => value + '%' } } } }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
