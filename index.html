@@ -368,7 +368,7 @@
             const wrapLabel = (label, maxWidth = 16) => {
                 if (label.length <= maxWidth) return label;
                 const words = label.split(' ');
-                const lines =;
+                const lines = [];
                 let currentLine = '';
                 for (const word of words) {
                     if ((currentLine + word).length > maxWidth && currentLine.length > 0) {
@@ -389,13 +389,13 @@
                         labels: ['수작업', '파란두루미 알고리즘'],
                         datasets: [{
                             label: '패턴 생성 속도',
-                            data: ,
-                            backgroundColor:,
-                            borderColor:,
+                            data: [100, 1000],
+                            backgroundColor: [brilliantBlues.danger, brilliantBlues.primary],
+                            borderColor: [brilliantBlues.danger, brilliantBlues.primary],
                             borderWidth: 1
                         }]
                     },
-                    options: {...commonOptions, scales: { y: { beginAtZero: true, ticks: { callback: (value) => value + '%' } } } }
+                    options: {...commonOptions, scales: { y: { beginAtZero: true, ticks: { callback: (value) => value + '개/분' } } } }
                 });
             }
 
@@ -407,8 +407,8 @@
                         labels: ['즉석 포토부스', '개인 굿즈', '이벤트/기념품', '기타'],
                         datasets: [{
                             label: '컬러 홀로그램 잠재 수요',
-                            data: ,
-                            backgroundColor:,
+                            data: [40, 30, 20, 10],
+                            backgroundColor: [brilliantBlues.primary, brilliantBlues.accent, brilliantBlues.secondary, brilliantBlues.neutral],
                             hoverOffset: 4
                         }]
                     },
@@ -424,11 +424,11 @@
                         labels: ['기존 홀로그램', '스크래치 홀로그램'],
                         datasets: [{
                             label: '장당 제작 비용',
-                            data: ,
-                            backgroundColor:,
+                            data: [100, 10],
+                            backgroundColor: [brilliantBlues.danger, brilliantBlues.accent2],
                         }]
                     },
-                    options: {...commonOptions, indexAxis: 'y', scales: { x: { beginAtZero: true, ticks: { callback: (value) => value + '%' } } } }
+                    options: {...commonOptions, indexAxis: 'y', scales: { x: { beginAtZero: true, ticks: { callback: (value) => value + '만원' } } } }
                 });
             }
 
@@ -437,10 +437,10 @@
                 new Chart(educationCtx, {
                     type: 'radar',
                     data: {
-                        labels:,
+                        labels: ['3D 체험', 'STEM 흥미', '참여도', '창의성', '실습 효과'],
                         datasets: [{
                             label: '교육적 활용성',
-                            data: ,
+                            data: [90, 85, 80, 75, 95],
                             fill: true,
                             backgroundColor: 'rgba(148, 210, 189, 0.4)',
                             borderColor: brilliantBlues.secondary,
@@ -459,7 +459,8 @@
                 new Chart(marketCtx, {
                     type: 'bubble',
                     data: {
-                        datasets:, backgroundColor: brilliantBlues.primary },
+                        datasets: [
+                            { label: 'B2B: 셀프사진관', data: [{x: 20, y: 40, r: 15}], backgroundColor: brilliantBlues.primary },
                             { label: 'B2G: 공공기관/체험존', data: [{x: 40, y: 50, r: 18}], backgroundColor: brilliantBlues.secondary },
                             { label: 'B2C: MZ세대 굿즈', data: [{x: 60, y: 25, r: 22}], backgroundColor: brilliantBlues.accent },
                             { label: '교육기관', data: [{x: 75, y: 60, r: 20}], backgroundColor: brilliantBlues.accent2 }
@@ -479,8 +480,8 @@
                         labels: wrappedLabels,
                         datasets: [{
                             label: '상용화 수준',
-                            data: ,
-                            backgroundColor:,
+                            data: [100, 60, 30],
+                            backgroundColor: [brilliantBlues.primary, brilliantBlues.secondary, brilliantBlues.neutral],
                         }]
                     },
                     options: {...commonOptions, indexAxis: 'y', scales: { x: { beginAtZero: true, max: 100, ticks: { callback: (value) => value + '%' } } } }
